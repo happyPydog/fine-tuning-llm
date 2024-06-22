@@ -8,14 +8,14 @@ Here are some good reference source for writing custom loggers:
 
 """
 
-import os
-import sys
+import datetime as dt
 import json
 import logging
 import logging.config
+import os
+import sys
 import threading
 import typing as t
-import datetime as dt
 
 _lock = threading.Lock()
 _default_handler: t.Optional[logging.Handler] = None

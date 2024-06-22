@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "<project_name>"
+name = "fine-tuning-llm"
 version = "0.0.0"
-description = "<description>"
+description = "Fine-tuning language models for various tasks"
 authors = ["Happydog <happydog0930@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "<project_name>", from = "src" }]
+packages = [{ include = "fine_tuning_llm", from = "src" }]
 
 [build-system]
 requires = ["poetry-core"]
@@ -18,4 +18,13 @@ line-length = 79
 profile = "black"
 line_length = 79
 src_paths = ["src", "tests"]
-known_first_party = ["autonotellm"]
+known_first_party = ["fine_tuning_llm"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+requests = "^2.32.3"
+transformers = "^4.41.2"
+peft = "^0.11.1"
+trl = "^0.9.4"
+torch = "^2.3.1"
+torchtune = "^0.1.1"
